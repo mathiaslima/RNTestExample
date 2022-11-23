@@ -25,7 +25,6 @@ export function SignIn({ navigation }) {
       <Input
         label="Usuário"
         placeholder="exemplo"
-        testID="inputUsername"
         onChangeText={username.set}
         error={usernameErrorMsg}
       />
@@ -33,12 +32,11 @@ export function SignIn({ navigation }) {
         label="Senha"
         placeholder="***"
         secureTextEntry
-        testID="inputPassword"
         onChangeText={password.set}
         error={passwordErrorMsg}
       />
       <ErrorText messages={[usernameErrorMsg, passwordErrorMsg]} />
-      <Button testID="buttonSubmit" title={"Login"} onPress={submit.set} />
+      <Button title={"Login"} onPress={submit.set} />
     </View>
   );
 }
