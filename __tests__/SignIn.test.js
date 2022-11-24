@@ -60,9 +60,7 @@ it("Verificar mensagem de erro se a senha for inválida", () => {
 });
 
 it("Caso de sucesso, usuário e senha válidos", async () => {
-  fetch = jest.fn(() =>
-    Promise.resolve({ json: () => Promise.resolve({ passes: true }) })
-  );
+  fetch = jest.fn(() => Promise.resolve({ json: () => Promise.resolve() }));
 
   const pushMock = jest.fn();
 
