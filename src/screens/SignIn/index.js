@@ -21,10 +21,13 @@ export function SignIn({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.headerText}>Login</Text>
+      <Text style={styles.headerText} testID="title-login">
+        Login
+      </Text>
       <Input
         label="Usuário"
         placeholder="exemplo"
+        testID="input-username"
         onChangeText={username.set}
         error={usernameErrorMsg}
       />
@@ -32,11 +35,12 @@ export function SignIn({ navigation }) {
         label="Senha"
         placeholder="***"
         secureTextEntry
+        testID="input-password"
         onChangeText={password.set}
         error={passwordErrorMsg}
       />
       <ErrorText messages={[usernameErrorMsg, passwordErrorMsg]} />
-      <Button title={"Login"} onPress={submit.set} />
+      <Button testID="button-login" title={"Login"} onPress={submit.set} />
     </View>
   );
 }
